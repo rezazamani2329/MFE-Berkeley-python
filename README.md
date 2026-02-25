@@ -1,3 +1,4 @@
+# Stock Return Prediction, Trading Strategy, Backtesting, Memoization 
 # MFE-Berkeley-python
 # Financial Engineering 
 # Building a Stock Return Prediction and Trading Strategy
