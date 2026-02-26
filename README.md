@@ -8,5 +8,6 @@
 # Memoization:
 Memoization is a technique where you cache (store) the results of expensive function calls and return the cached result when the same inputs occur again. This avoids redundant computation
 # Memory management 
+# API and Gen AI
 
 This repo has been done in UC Berkeley in MFE program. stock return was hw4, API_Memoization was hw5, and memeory_management was hw3
