@@ -1,0 +1,35 @@
+# .flake8 — Configuration file for flake8, the Python style & error checker.
+#
+# flake8 reads this file automatically when run from the project root.
+# These settings keep flake8 consistent with the other tools in the project
+# (black for formatting, isort for imports, mypy for type checking).
+
+[flake8]
+
+# Maximum allowed line length before flake8 raises an E501 error.
+# Set to 100 to match the --line-length=100 used by black in the Makefile,
+# so the two tools never disagree on line length.
+max-line-length = 100
+
+# Directories and file patterns that flake8 should completely skip.
+# These are either not our code or are auto-generated, so linting them
+# would produce noise without any benefit:
+#   .git          — version control internals
+#   __pycache__   — Python's compiled bytecode cache
+#   .venv         — virtual environment (third-party packages)
+#   build, dist   — packaging output folders
+#   .eggs, *.egg-info — legacy setuptools build artifacts
+exclude = .git,__pycache__,.venv,build,dist,.eggs,*.egg-info
+
+# Specific flake8 error / warning codes to silence globally.
+# These are intentionally ignored because they conflict with black's
+# auto-formatting style:
+#
+#   E203 — "whitespace before ':'"
+#           black adds spaces around slice colons (e.g. x[1 : 2]),
+#           which flake8 would flag as a violation. Ignoring keeps them in sync.
+#
+#   W503 — "line break before binary operator"
+#           black prefers line breaks *before* operators (the W504 style),
+#           which triggers W503. Ignoring avoids a constant false-positive.
+ignore = E203,W503
